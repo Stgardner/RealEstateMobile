@@ -4,6 +4,7 @@ import HomeScreen from "./src/screens/Home/index"
 import Post from "./src/components/Post/index"
 import feed from './assets/data/feed'
 import SearchResultsScreen from './src/screens/SearchResults/index'
+import LocationSearchScreen from './src/screens/LocationSearch/index'
 
 const post1 = feed[0];
 
@@ -13,7 +14,10 @@ const App = () => {
     <>
     <StatusBar barStyle="dark-content"/>
     <SafeAreaView scrollable={true}>
-      <SearchResultsScreen />
+      {/*<HomeScreen>*/}
+      {/*<Post post={post} />*/}
+      {/*<SearchResultsScreen />*/}
+      <LocationSearchScreen />
       </SafeAreaView>
     </>
   );
