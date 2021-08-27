@@ -8,8 +8,11 @@ const GuestScreen = props => {
     const [adults, setAdults] = useState(initialState= 0)
     const [children, setChildren] = useState(initialState=0)
     const [infants, setInfants] = useState(initialState=0)
+
+    const navigation = useNavigation()
     return (
-        <View>
+        <View style={{justifyContent: 'space-between', height: '100%'}}>
+            <View >
             <View style={styles.row}>
                 <View>
                     <Text style={{fontWeight: "bold"}}>Adults</Text>
@@ -58,7 +61,7 @@ const GuestScreen = props => {
                 </View>
             </View>
 
-            <View>
+            
             <View style={styles.row}>
                 <View>
                     <Text style={{fontWeight: "bold"}}>Infants</Text>
@@ -82,8 +85,32 @@ const GuestScreen = props => {
                     </Pressable>
                 </View>
             </View>
+            </View>
 
-        </View>
+            
+                <Pressable 
+                    onPress={() => navigation.navigate("") }
+                    style={{
+                        marginBottom: 22, 
+                        backgroundColor: '#f15454',
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: 52, 
+                        marginHorizontal: 22,
+                        borderRadius: 12}}
+                >
+                    <Text 
+                        style={{
+                            fontSize: 22, 
+                            color: 'white', 
+                            fontWeight: 'bold'
+                        }}
+                    >
+                        Search
+                    </Text>
+                </Pressable>
+            
+        
         </View>
     )
 }
